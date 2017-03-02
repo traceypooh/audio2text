@@ -11,7 +11,8 @@ cd [to directory you have cloned this repo to]
 
 ## RUN
 
-```av2text(){ av=$(basename "$1"); docker run --rm -v $(dirname $(realpath "$1")):/app/av audio2text npm test av/"$av"; rm -f "$1".temp.wav; }
+```bash
+av2text(){ av=$(basename "$1"); docker run --rm -v $(dirname $(realpath "$1")):/app/av audio2text npm test av/"$av"; rm -f "$1".temp.wav; }
 av2text myfile.mp3```
 
    ( will make:   myfile.mp3.srt   myfile.mp3.json )
