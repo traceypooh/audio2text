@@ -14,8 +14,11 @@ docker build -t audio2text .
 ## RUN
 
 ```bash
-av2text(){ av=$(basename "$1"); docker run --rm -v $(dirname $(realpath "$1")):/app/av audio2text npm test av/"$av"; rm -f "$1".temp.wav; }
-av2text myfile.mp3
+docker run --rm audio2text  <  INPUT-FILENAME | unzip -
 ```
-
-   ( will make:   myfile.mp3.srt   myfile.mp3.json )
+will make:
+* out.json
+* out.txt
+* out.srt
+* out.keys
+* out.plo
