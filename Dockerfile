@@ -10,7 +10,7 @@ RUN apt-get update  &&  apt-get install -y  \
 RUN git clone https://github.com/OpenNewsLabs/offline_speech_to_text.git /app
 WORKDIR /app
 
-COPY *.sh /app
+COPY *.sh /app/
 
 # repo above is mac-centric -- swap in our linux pkg binaries installed above
 RUN \
@@ -29,6 +29,11 @@ RUN perl -i -pe 's="./norman_door.mp4"=process.argv[2]=' tests/test_main.js
 # NLP for extracting entities (people, locations, organizations)
 #   http://nlp.stanford.edu/software/CRF-NER.shtml
 RUN wget http://nlp.stanford.edu/software/stanford-ner-2016-10-31.zip
+
+
+# jscott's generic keyword, retrieved via request from:
+RUN wget http://fos.textfiles.com/KEY.tar  &&  tar xf KEY.tar
+
 
 
 RUN (echo -n 'audio2text created: '; date) >> /CREATED
