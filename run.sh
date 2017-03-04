@@ -27,8 +27,7 @@
 
 
   # extract Person Location and Organization entities using NLP
-  java  -mx1000m   -cp   stanford-ner-2016-10-31/stanford-ner.jar   edu.stanford.nlp.ie.crf.CRFClassifier   -inputEncoding utf-8    -outputEncoding utf-8 -loadClassifier stanford-ner-2016-10-31/classifiers/english.all.3class.distsim.crf.ser.gz  -textFile  out.txt > out.plo;
-
+  java -mx1000m -cp   stanford-ner-2016-10-31/stanford-ner.jar   edu.stanford.nlp.ie.crf.CRFClassifier -inputEncoding utf-8 -outputEncoding utf-8 -loadClassifier stanford-ner-2016-10-31/classifiers/english.all.3class.distsim.crf.ser.gz -outputFormat tabbedEntities -textFile out.txt |cut -f1,2 |egrep '[A-Z]' |sort -k1,1 -k2,2 |egrep '[A-Z]' |uniq -c | sort -k1,1nr -k2,2 |tee out.plo;
 
   # do generic keywording
   python  spindle-code/keywords/keywords.py  out.txt  >  out.key;
