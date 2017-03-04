@@ -26,9 +26,3 @@ will make (click each to see the results!:
 * ![out.srt](out.srt "out.srt") - timed transcript of audio/video file
 * ![out.key](out.keys "out.key") - keywords extracted from .txt (above)
 * ![out.plo](out.plo "out.plo") - Persons, Locations, Organizations (and more) extracted from .txt (above)
-
-
-* out.txt
-* out.srt
-* out.keys
-* out.plo
