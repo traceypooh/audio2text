@@ -26,7 +26,7 @@ RUN perl -i -pe 's="./norman_door.mp4"=process.argv[2]=' tests/test_main.js
 
 # NLP for extracting entities (people, locations, organizations)
 #   http://nlp.stanford.edu/software/CRF-NER.shtml
-RUN wget http://nlp.stanford.edu/software/stanford-ner-2016-10-31.zip  &&  unzip stanford-ner-2016-10-31.zip
+RUN wget -q http://nlp.stanford.edu/software/stanford-ner-2016-10-31.zip  &&  unzip stanford-ner-2016-10-31.zip
 
 
 # generic keyworder code

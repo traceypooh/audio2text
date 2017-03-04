@@ -19,7 +19,7 @@ docker build -t audio2text .
 ## RUN
 
 ```bash
-( sudo docker run --rm -i audio2text |tar xf - ) < test.mp3
+( docker run --rm -i audio2text |tar xf - ) < test.mp3
 ```
 will make (click each to see the results):
 * ![out.json](out.json "out.json") - detailed word/phrase with timings
