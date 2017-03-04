@@ -20,7 +20,7 @@ docker build -t audio2text .
 ```bash
 docker run --rm -i audio2text  <  test.mp3 | tar xf -
 ```
-will make (click each to see the results!:
+will make (click each to see the results):
 * ![out.json](out.json "out.json") - detailed word/phrase with timings
 * ![out.txt](out.txt "out.txt") - transcript of entire audio/video file
 * ![out.srt](out.srt "out.srt") - timed transcript of audio/video file
