@@ -14,7 +14,7 @@ docker build -t audio2text .
 ## RUN
 
 ```bash
-docker run --rm -i audio2text  <  INPUT-FILENAME | tar xf -
+docker run --rm -i audio2text  <  test.mp3 | tar xf -
 ```
 will make:
 * out.json

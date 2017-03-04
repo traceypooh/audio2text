@@ -19,7 +19,7 @@
 
   # run speech-to-text
   npm test out;
-  rm -f out out.tmp.wav;
+  rm -f out out.temp.wav;
 
 
   # convert SRT to transcript of words TXT file
@@ -31,7 +31,10 @@
 
 
   # do generic keywording
-  python  spindle-code/keywords/keywords.py  out.txt  >  out.key
+  python  spindle-code/keywords/keywords.py  out.txt  >  out.key;
+
+  ls -lh out.*
+  set +x
 )  1>&2 ; # move any uncaptured-to-output-file  stdout output to stderr
 
 # write all results into a tar single file and dump it to stdout
