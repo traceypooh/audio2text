@@ -6,6 +6,7 @@ Allows one to, once SETUP is done, run locally on a Mac, network disabled / no c
 
 ## PREREQUISTES
 Docker (eg:  https://docs.docker.com/docker-for-mac/install/ )
+
 git  (brew or XCode setups have you covered ;-)
 
 ## SETUP
