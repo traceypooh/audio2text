@@ -25,5 +25,5 @@ will make (click each to see the results):
 * [out.json](out.json) - detailed word/phrase with timings
 * [out.txt](out.txt) - transcript of entire audio/video file
 * [out.srt](out.srt) - timed transcript of audio/video file
-* [out.key](out.keys) - keywords extracted from .txt (above)
+* [out.key](out.key) - keywords extracted from .txt (above)
 * [out.plo](out.plo) - Persons, Locations, Organizations (and more) extracted from .txt (above)
