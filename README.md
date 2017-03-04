@@ -1,5 +1,8 @@
 # audio2text
-docker-based pocketsphinx that takes A/V input file to create text from the audio and extract keywords and entities from the results
+docker-based pocketsphinx that takes A/V input file to create text from the audio and extract keywords and entities from the results.
+
+Allows one to, once SETUP is done, run locally on a Mac, network disabled / no cloud, and run speech to text and text analysis on an A/V file.
+
 
 ## PREREQUISTES
 Docker (eg:  https://docs.docker.com/docker-for-mac/install/ )
